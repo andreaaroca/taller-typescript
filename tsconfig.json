@@ -6,8 +6,8 @@
       "rootDir": "./src",
       "strict": true,
       "esModuleInterop": true,
-      "skipLibCheck": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*.d.ts", "AppData/**"]
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    }
   }
+  

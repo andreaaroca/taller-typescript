@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const data_js_1 = require("./data.js");
+import { series } from './data.js';
 const seriesTable = document.getElementById("seriesTable");
 function mostrarSeries() {
     seriesTable.innerHTML = "";
-    data_js_1.series.forEach((serie) => {
+    series.forEach((serie) => {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${serie.id}</td>
@@ -24,7 +22,7 @@ function mostrarSeries() {
     seriesTable.appendChild(promedioRow);
 }
 function calcularPromedioTemporadas() {
-    const totalSeasons = data_js_1.series.reduce((acc, serie) => acc + serie.seasons, 0);
-    return totalSeasons / data_js_1.series.length;
+    const totalSeasons = series.reduce((acc, serie) => acc + serie.seasons, 0);
+    return totalSeasons / series.length;
 }
 document.addEventListener("DOMContentLoaded", mostrarSeries);

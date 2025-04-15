@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Serie = void 0;
-class Serie {
+export class Serie {
     constructor(id, name, channel, seasons) {
         this.id = id;
         this.name = name;
@@ -9,4 +6,3 @@ class Serie {
         this.seasons = seasons;
     }
 }
-exports.Serie = Serie;
